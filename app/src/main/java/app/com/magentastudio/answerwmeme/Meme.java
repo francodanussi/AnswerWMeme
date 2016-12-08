@@ -7,8 +7,7 @@ public class Meme {
     private String titulo;
     private int img;
 
-    public Meme(String titulo, int img) {
-        this.titulo = titulo;
+    public Meme(int img) {
         this.img = img;
     }
 

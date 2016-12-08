@@ -1,7 +1,9 @@
 package app.com.magentastudio.answerwmeme;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.GridLayoutManager;
+import android.support.v7.widget.RecyclerView;
 
 import java.util.List;
 
@@ -14,5 +16,21 @@ public class MainActivityMeme extends AppCompatActivity {
 
         List<Meme> listaDeMemesFavoritos;
 
+        listaDeMemesFavoritos.add(new Meme((R.drawable/"m2"));
+
+
+        RecyclerView recyclerViewMemesFavoritos = (RecyclerView)findViewById(R.id.recyclerViewMemesFavoritos);
+
+        recyclerViewMemesFavoritos.setHasFixedSize(true);
+
+
+        recyclerViewMemesFavoritos.setLayoutManager(new GridLayoutManager(this,3));
+
+        AdaptadorDeMemesFavoritos adaptadorJuguetesRecycler = new AdaptadorDeMemesFavoritos(listaDeMemesFavoritos,this);
+
+        recyclerViewMemesFavoritos.setAdapter(adaptadorJuguetesRecycler);
     }
+}
+
+}
 }
